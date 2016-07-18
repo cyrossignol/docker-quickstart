@@ -1,0 +1,46 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <p>Resources</p>
+        <ul class="contact-list">
+            <li><a href="https://www.docker.com">Docker</a></li>
+            <li><a href="https://hub.docker.com">Docker Hub</a></li>
+            <li><a href="https://www.docker.com/products/docker-toolbox">Docker Toolbox</a></li>
+            <li><a href="https://docs.docker.com">Docker Documentation</a></li>
+            <li><a href="https://docs.docker.com/engine/reference/builder/">Dockerfile Reference</a></li>
+            <li><a href="https://docs.docker.com/compose/compose-file/">Compose File Reference</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          <li>
+            {% include icon-github.html label="GitHub" url="https://github.com/cyrossignol/docker-quickstart" %}
+          </li>
+          <li>
+            {% include icon-github.html label="Report an Issue" url="https://github.com/cyrossignol/docker-quickstart/issues" %}
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+        <p>
+            The content of this project is licensed under the
+            <a href="{{ site.license_url }}">{{ site.license }}</a>.
+        <p>
+            Docker is a trademark or registered trademark of Docker, Inc. in the
+            United States and/or other countries. Docker, Inc. and other parties
+            may also have trademark rights in other terms used herein.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

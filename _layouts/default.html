@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+    <script>
+        //
+        // Quick and dirty way to add basic Dockerfile syntax highlighting
+        // because the version of rouge installed with Jekyll doesn't include
+        // a lexer for Docker
+        //
+        // We can do this with plain JavaScript later instead of loading the
+        // ol' jQuery
+        //
+        $(document).ready(function () {
+            $('code.language-dockerfile').each(function () {
+                var instructionsPattern = /(FROM|MAINTAINER|CMD|EXPOSE|ENV|COPY|ADD|RUN|ENTRYPOINT|VOLUME|WORKDIR|USER)/mg;
+                var highlightFormat = "<span class=\"k\">$1</span>";
+
+                $(this)
+                    .html($(this).html().replace(instructionsPattern, highlightFormat))
+                    .parent().addClass('highlight')
+                    .parent().addClass('highlighter-rouge');
+            });
+        });
+    </script>
+
+  </body>
+
+</html>

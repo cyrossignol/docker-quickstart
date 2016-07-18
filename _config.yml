@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Docker Quickstart Tutorial
+email: cy@rossignols.me
+description: > # this means to ignore newlines until "baseurl:"
+  An unofficial hands-on tutorial designed to quickly provide working knowledge
+  of Docker using the source code of this tutorial itself.
+baseurl: "/docker-quickstart" # the subpath of your site, e.g. /blog
+url: "http://cyrossignol.github.io" # the base hostname & protocol for your site
+license: Creative Commons Attribution 4.0 license
+license_url: https://creativecommons.org/licenses/by/4.0/
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
